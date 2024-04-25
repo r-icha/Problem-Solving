@@ -1,0 +1,28 @@
+import java.util.*;
+import java.util.Arrays;
+public class compare{
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int Ap=0;
+        int Bp=0;
+        
+        int[] a = new int[3];
+        int[] b = new int[3];
+        for(int i=0; i<3; i++){
+            a[i]=sc.nextInt();
+
+        }
+        for(int i=0; i<3; i++){
+            b[i]=sc.nextInt();
+        }
+        for(int i=0; i<3; i++){
+            if(a[i]>b[i]){
+                Ap++;
+            }
+            else if(a[i]<b[i]){
+                Bp++;
+            }
+        }
+        System.out.print(Ap+" "+Bp);
+    }
+}
