@@ -1,0 +1,38 @@
+import java.util.*;
+import java.util.Arrays;
+import java.io.*;
+
+public class Plusminus{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        int arr[] = new int[n];
+        float positive=0f;
+        float negative=0f;
+        float zero=0f;
+        for(int i=0; i<n; i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        for(int i=0; i<n; i++){
+            if(arr[i]>0){
+                //positive+= 1;
+                positive++;
+            }
+            if(arr[i]<0){
+                //negative+=1;
+                negative++;
+            }
+            if(arr[i]==0){
+                //zero+=1;
+                zero++;
+            }
+        }
+        float p = (positive)/n;
+        float ne = (negative)/n;
+        float z = (zero)/n;
+        System.out.println(String.format("%.6f", p));
+        System.out.println(String.format("%.6f", ne));
+        System.out.println(String.format("%.6f", z));
+    }
+}
